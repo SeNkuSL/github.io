@@ -1,0 +1,178 @@
+
+<html lang="ru">
+<head>
+<title>
+Работа номер 18
+</title>
+</head>
+<body background="img/fon.jpg">
+<font face="Times New Roman" size=5>
+<center><h2>управление страницами</h2><hr color=black size=10>
+<p><a href="index.html" title="Ссылка на 1 страницу сайта">Главная страница.</a></p>
+<p><a href="page2.html" title="Ссылка на 2 страницу сайта">Ссылки в html.</a></p>
+<p><a href="page3.html" title="Ссылка на 3 страницу сайта">Специальные символы и создание списков в html.</a></p>
+<p><a href="page4.html" title="Ссылка на 4 страницу сайта">Таблицы в html.</a></p>
+<hr color=black size=10></center>
+<br>
+    <h1>Урок 8. Таблицы в HTML</h1>
+    
+    <section>
+        <h2>Основы таблиц в HTML</h2>
+        <p>Таблица в HTML состоит из строк и ячеек. Основные теги:</p>
+        
+        <div class="code">
+&lt;table&gt; &lt;!-- Контейнер таблицы --&gt;
+  &lt;tr&gt; &lt;!-- Строка таблицы (table row) --&gt;
+    &lt;td&gt;Ячейка&lt;/td&gt; &lt;!-- Ячейка данных (table data) --&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </div>
+        
+        <div class="example">
+            <h3>Пример простой таблицы:</h3>
+            <table border="1">
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 3</td>
+                    <td>Ячейка 4</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Основные теги таблиц</h2>
+        
+        <h3>1. &lt;table&gt;</h3>
+        <p>Главный контейнер для таблицы. Все остальные теги таблицы должны находиться внутри него.</p>
+        
+        <h3>2. &lt;tr&gt; (table row)</h3>
+        <p>Определяет строку таблицы. Каждая строка содержит одну или несколько ячеек (&lt;td&gt; или &lt;th&gt;).</p>
+        
+        <h3>3. &lt;td&gt; (table data)</h3>
+        <p>Определяет стандартную ячейку таблицы, содержащую данные.</p>
+        
+        <h3>4. &lt;th&gt; (table header)</h3>
+        <p>Определяет ячейку-заголовок. Текст внутри &lt;th&gt; обычно выделяется жирным и центрируется.</p>
+        
+        <div class="example">
+            <h3>Пример с заголовками:</h3>
+            <table border="1">
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                </tr>
+                <tr>
+                    <td>Данные 1</td>
+                    <td>Данные 2</td>
+                </tr>
+            </table>
+        </div>
+        
+        <h3>5. &lt;caption&gt;</h3>
+        <p>Определяет заголовок таблицы. Должен идти сразу после открывающего тега &lt;table&gt;.</p>
+        
+        <div class="example">
+            <h3>Пример с заголовком таблицы:</h3>
+            <table border="1">
+                <caption>Моя таблица</caption>
+                <tr>
+                    <th>Имя</th>
+                    <th>Возраст</th>
+                </tr>
+                <tr>
+                    <td>Анна</td>
+                    <td>25</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Атрибуты таблиц</h2>
+        
+        <h3>1. border</h3>
+        <p>Определяет толщину границы таблицы в пикселях.</p>
+        <div class="code">
+&lt;table border="1"&gt;
+        </div>
+        
+        <h3>2. width и height</h3>
+        <p>Определяют ширину и высоту таблицы (в пикселях или процентах).</p>
+        <div class="code">
+&lt;table width="500" height="200"&gt;
+        </div>
+        
+        <h3>3. cellpadding и cellspacing</h3>
+        <p>cellpadding - отступ между содержимым ячейки и ее границами.<br>
+        cellspacing - расстояние между ячейками.</p>
+        <div class="code">
+&lt;table cellpadding="10" cellspacing="5"&gt;
+        </div>
+        
+        <h3>4. bgcolor</h3>
+        <p>Цвет фона таблицы или ячейки.</p>
+        <div class="code">
+&lt;table bgcolor="#f0f0f0"&gt;
+&lt;tr bgcolor="lightblue"&gt;
+&lt;td bgcolor="yellow"&gt;
+        </div>
+        
+        <h3>5. align и valign</h3>
+        <p>align - горизонтальное выравнивание (left, center, right).<br>
+        valign - вертикальное выравнивание (top, middle, bottom).</p>
+        <div class="code">
+&lt;td align="center" valign="middle"&gt;
+        </div>
+        
+        <div class="example">
+            <h3>Пример с атрибутами:</h3>
+            <table border="1" width="80%" bgcolor="#f9f9f9" cellpadding="8" cellspacing="0" align="center">
+                <caption>Таблица с атрибутами</caption>
+                <tr bgcolor="#e0e0e0">
+                    <th width="30%">Заголовок 1</th>
+                    <th width="70%">Заголовок 2</th>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">Слева вверху</td>
+                    <td align="right" valign="bottom">Справа внизу</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Объединение ячеек</h2>
+        
+        <h3>1. colspan</h3>
+        <p>Объединяет ячейки по горизонтали (указывает, сколько столбцов должна занимать ячейка).</p>
+        
+        <h3>2. rowspan</h3>
+        <p>Объединяет ячейки по вертикали (указывает, сколько строк должна занимать ячейка).</p>
+        
+        <div class="example">
+            <h3>Пример с объединением ячеек:</h3>
+            <table border="1">
+                <tr>
+                    <td colspan="2">Объединенные столбцы</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Объединенные строки</td>
+                    <td>Ячейка 1</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 2</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Современные альтернативы</h2>
+        <p>Хотя таблицы полезны для представления табличных данных, для верстки страниц лучше использовать CSS (Flexbox, Grid).</p>
+    </section>
+</body>
+</html>
